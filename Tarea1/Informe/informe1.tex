@@ -44,7 +44,7 @@ La red cuenta con 1899 nodos y 13.838 aristas
 
 \subsection{Dibujo}
 \begin{center}
-    \includegraphics[scale=0.5]{images/dibujo_red.png}
+    \includegraphics[scale=0.4]{images/dibujo_red.png}
 \end{center}
 
 \subsection{Conexidad}
@@ -56,12 +56,22 @@ La red es completamente conexa
 \begin{itemize}
     \item Grado mínimo: 1
     \item Grado máximo: 255
-    \item Gráfico de distribución de grados:
-    \item 
+    \item Gráfico de distribución de grados: 
 \end{itemize}
-Reporte el grado mínimo, máximo y promedio. Grafique la distribución de los grados. [Ojo: no use el gráfico que hace Gephi; exporte la lista de grados y haga un gráfico en otra herramienta -Excel, R, cualquiera sirve. Para exportar vaya a la tabla de datos en el "Laboratorio de datos", y ahí puede exportar.] Intente describir la distribución de los grados (es probable que se acerque a una ley de potencia, pero también podría haber distribuciones distintas en algunas redes).
+\begin{center}
+    \includegraphics[scale=0.35]{images/distribucion_grados.png}
+\end{center}
+Con escala logarítmica:
 
+\begin{center}
+    \includegraphics[scale=0.35]{images/distribucion_grados_log_log.png}
+\end{center}
+
+Se puede observar que si bien se esperaría que fuera una ley de potencia, no lo es 
 \subsection{Distancias} 
+La distancia promedio entre los nodos es de 3.055 y el diámetro de la red es 8
+(hay que ver si es que se justifica)
+
 Determine la distancia promedio entre los nodos, y el diámetro de la red. ¿Se justifica hablar de efecto small world?
 
 \subsection{Transitividad} 
