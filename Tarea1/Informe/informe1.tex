@@ -6,7 +6,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
-
+\usepackage{array}
 \renewcommand{\familydefault}{\sfdefault}
 
 \begin{document}
@@ -25,10 +25,10 @@
 \HRule \\[1.5cm]
  
 \begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
+\begin{center} \large
 Florencia Ramírez\\
 Sofía Riquelme
-\end{flushleft}
+\end{center}
 
 \end{minipage}\\[2cm]
 
@@ -70,28 +70,71 @@ Con escala logarítmica:
 
 Se puede observar que si bien se esperaría que fuera una ley de potencia, no lo es 
 \subsection{Distancias} 
+\textit{Determine la distancia promedio entre los nodos, y el diámetro de la red. ¿Se justifica hablar de efecto small world?}
+
 La distancia promedio entre los nodos es de 3.055 y el diámetro de la red es 8
 (hay que ver si es que se justifica)
 
-Determine la distancia promedio entre los nodos, y el diámetro de la red. ¿Se justifica hablar de efecto small world?
 
 \subsection{Transitividad} 
+\textit{Determine el coeficiente de clustering local de la red. ¿Hay transitividad alta?}
+
 El coeficiente de clustering promedio de la red es  0.11 y la transitividad de la red es 0.05. Esto indica que no hay un alto nivel de clustering ni tampoco una transitividad alta
 
-Determine el coeficiente de clustering local de la red. ¿Hay transitividad alta?
 
 \subsection{Centralidad}  
-Determine la centralidad de intermediación, PageRank y cercanía de cada nodo. Expórtelas a alguna herramienta de análisis y explore qué tan relacionadas están entre sí, y con el grado del nodo (en particular, haga gráficos de dispersión de grado y PageRank, PageRank e intermediación, etc.). Identifique las mayores desviaciones (nodos con centralidad alta según una métrica y baja según otra) e intente explicarlas en función de la estructura de la red. Obtenga imágenes de la red coloreada según los valores de las distintas centralidades. [Nota: Gephi es un poco críptico. Para calcular intermediación o cercanía hay que decirle que calcule "diámetro de la red", que no tiene nada que ver.]
+\textit{Determine la centralidad de intermediación, PageRank y cercanía de cada nodo. Expórtelas a alguna herramienta de análisis y explore qué tan relacionadas están entre sí, y con el grado del nodo (en particular, haga gráficos de dispersión de grado y PageRank, PageRank e intermediación, etc.). Identifique las mayores desviaciones (nodos con centralidad alta según una métrica y baja según otra) e intente explicarlas en función de la estructura de la red. Obtenga imágenes de la red coloreada según los valores de las distintas centralidades. [Nota: Gephi es un poco críptico. Para calcular intermediación o cercanía hay que decirle que calcule "diámetro de la red", que no tiene nada que ver.]}
 
 \subsection{Núcleo/Periferia}
-Determine la profundidad de k-cores (el máximo k para el cual el k-core es no vacío), y la cantidad de nodos en cada k-shell (cada “capa de la cebolla” en k-cores).
+\textit{Determine la profundidad de k-cores (el máximo k para el cual el k-core es no vacío), y la cantidad de nodos en cada k-shell (cada “capa de la cebolla” en k-cores).}
 
-\subsection{Comunidades} Aplique el algoritmo de Lovaina de detección de comunidades (Gephi lo trae por defecto). Si usa parámetros distintos al default, especifique. Reporte la cantidad y el tamaño de las comunidades encontradas, y el valor de modularidad conseguido. Use las comunidades obtenidas para colorear la red. ¿Se aprecia en el gráfico la estructura de comunidades? ¿Interactúan todas con todas, o cada comunidad se relaciona con unas pocas de las demás? [Aquí si hace falta puede jugar un poco más con las opciones de layout, para buscar un buen dibujo de la red.]
+La profundidad de los k-cores es 20, y para cada k-core, a continuación se adjunta una tabla con su cantidad de nodos:
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{\( k \)} & \textbf{Cantidad de Nodos} \\ \hline
+        0  & 0   \\ \hline
+        1  & 401 \\ \hline
+        2  & 228 \\ \hline
+        3  & 141 \\ \hline
+        4  & 118 \\ \hline
+        5  & 100 \\ \hline
+        6  & 75  \\ \hline
+        7  & 54  \\ \hline
+        8  & 64  \\ \hline
+        9  & 59  \\ \hline
+        10 & 44  \\ \hline
+        11 & 57  \\ \hline
+        12 & 39  \\ \hline
+        13 & 32  \\ \hline
+        14 & 63  \\ \hline
+        15 & 54  \\ \hline
+        16 & 29  \\ \hline
+        17 & 53  \\ \hline
+        18 & 55  \\ \hline
+        19 & 32  \\ \hline
+        20 & 201 \\ \hline
+    \end{tabular}
+    \caption{Cantidad de nodos en cada k-shell}
+    \label{tab:k_shells}
+\end{table}
+
+\subsection{Comunidades} 
+\textit{Aplique el algoritmo de Lovaina de detección de comunidades (Gephi lo trae por defecto). Si usa parámetros distintos al default, especifique. Reporte la cantidad y el tamaño de las comunidades encontradas, y el valor de modularidad conseguido. Use las comunidades obtenidas para colorear la red. ¿Se aprecia en el gráfico la estructura de comunidades? ¿Interactúan todas con todas, o cada comunidad se relaciona con unas pocas de las demás? [Aquí si hace falta puede jugar un poco más con las opciones de layout, para buscar un buen dibujo de la red.]}
+
+Se obtuvieron 15 comunidades distintas, con una modularidad de 0.355. A continuación se presenta una imagen coloreada por comunidad:
+\begin{center}
+    \includegraphics[scale=0.4]{images/red_comunidades.png}
+\end{center}
 \subsection{Asortatividad}
-Calcule el coeficiente de correlación de Newman para medir la asortatividad de la red. ¿Le parece asortativa, disasortativa, o ninguna?
+\textit{Calcule el coeficiente de correlación de Newman para medir la asortatividad de la red. ¿Le parece asortativa, disasortativa, o ninguna?}
 
-\subsection{Modelo estructural} Genere 10 redes aleatorizadas que compartan la distribución de grados de su red, y para cada una de ellas determine la modularidad (aplicando el mismo algoritmo de Lovaina), el coeficiente de correlación, el coeficiente de clustering local, y la profundidad de k-cores. Compare los valores con el obtenido para su red: ¿pueden explicarse sus valores a partir de la distribución de grados, o parecen ser propiedades específicas de la red?
+El coeficiente de correlación de Newman es -0.18 para esta red. Esto indica que es disasortativa (por ser un valor negativo), sin embargo, no está lo suficientemente cerca de -1 como para ser completamente disasortativa
+
+\subsection{Modelo estructural} 
+\textit{Genere 10 redes aleatorizadas que compartan la distribución de grados de su red, y para cada una de ellas determine la modularidad (aplicando el mismo algoritmo de Lovaina), el coeficiente de correlación, el coeficiente de clustering local, y la profundidad de k-cores. Compare los valores con el obtenido para su red: ¿pueden explicarse sus valores a partir de la distribución de grados, o parecen ser propiedades específicas de la red?}
 
 
 \end{document}
