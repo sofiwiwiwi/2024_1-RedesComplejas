@@ -110,7 +110,7 @@ Finalmente, al graficar la relación entre el grado e intermediación de un nodo
 \end{center}
 
 % si nodos con grado bajo son criticos, conectando clusters o comunidades
-Se puede notar como, para la mayoría de los casos, el grado del nodo está directamente relacionado con la intermediación de este. Sim embargo, se puede notar la existencia de algunas excepciones, existen nodos con menor grado que tienen un alto valor de intermediación, mientras que algunos nodos con mayor grado no tienen grandes valores de intermediación, lo que no garantiza que al tener una gran cantidad de conexiones se tenga también un gran valor de intermediación.
+Se puede notar como, para la mayoría de los casos, el grado del nodo está directamente relacionado con la intermediación de este. Sin embargo, se puede notar la existencia de algunas excepciones, existen nodos con menor grado que tienen un alto valor de intermediación, mientras que algunos nodos con mayor grado no tienen grandes valores de intermediación, lo que no garantiza que al tener una gran cantidad de conexiones se tenga también un gran valor de intermediación.
 
 \subsection{Núcleo/Periferia}
 \textit{Determine la profundidad de k-cores (el máximo k para el cual el k-core es no vacío), y la cantidad de nodos en cada k-shell (cada “capa de la cebolla” en k-cores).}
@@ -163,6 +163,36 @@ El coeficiente de correlación de Newman es -0.18 para esta red. Esto indica que
 
 \subsection{Modelo estructural} 
 \textit{Genere 10 redes aleatorizadas que compartan la distribución de grados de su red, y para cada una de ellas determine la modularidad (aplicando el mismo algoritmo de Lovaina), el coeficiente de correlación, el coeficiente de clustering local, y la profundidad de k-cores. Compare los valores con el obtenido para su red: ¿pueden explicarse sus valores a partir de la distribución de grados, o parecen ser propiedades específicas de la red?}
+A continuación se presenta una tabla con los valores obtenidos al generar 10 redes aleatorias:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        No. & Modularidad & Correlación & Clustering & k-cores \\
+        \hline
+        1  & 0.2058 & -0.0477 & 0.0665 & 18 \\
+        2  & 0.2099 & -0.0412 & 0.0670 & 18 \\
+        3  & 0.2054 & -0.0479 & 0.0706 & 18 \\
+        4  & 0.2094 & -0.0467 & 0.0723 & 19 \\
+        5  & 0.2081 & -0.0528 & 0.0686 & 18 \\
+        6  & 0.2036 & -0.0444 & 0.0667 & 18 \\
+        7  & 0.2040 & -0.0533 & 0.0694 & 18 \\
+        8  & 0.2076 & -0.0547 & 0.0685 & 18 \\
+        9  & 0.2066 & -0.0288 & 0.0634 & 19 \\
+        10 & 0.2105 & -0.0430 & 0.0690 & 18 \\
+        \hline
+    \end{tabular}
+    \caption{Análisis de redes aleatorizadas}
+    \label{tab:redes_aleatorizadas}
+\end{table}
+Considerando los valores de la tabla anterior, se puede observar lo siguiente:
+\begin{itemize}
+	\item Modularidad: En la red original la modularidad es de 0.355 mientras que en las redes aleatorizadas varían entre 0.2036 y 0.2105. Dado que esta es una variación significativa de la red original, indica que hay características específicas de la red que generan estos valores
 
+	\item Profundidad de k-cores: En la red original son 20 y en las aleatorizadas varía entre 18 y 19. Estos valores son bastante cercanos entre sí, por lo que sí se podría explicar por la distribución de grados
 
+	\item Coeficiente de clustering: En la red original el coeficiente es 0.11, y en las redes aleatorias varían entre 0.0634 y 0.0723. Esto sugiere que el coeficiente de clustering de la red original no puede explicarse simplemente por la distribución de grados.
+
+	\item Correlación de grado: En la red original se tiene un coeficiente de correlación de  -0.18 mientras que en las redes aleatorias varían entre -0.0288 y -0.0547. La red original tiene una correlación de grado más negativa que las redes aleatorizadas, indicando que la tendencia de nodos de alto grado a conectarse con nodos de bajo grado es más pronunciada en la red original que en las aleatorizadas.
+\end{itemize}
 \end{document}
