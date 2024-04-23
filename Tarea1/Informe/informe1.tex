@@ -91,7 +91,26 @@ Luego de determinar la centralidad de intermediación, cercanía y PageRank de c
     \includegraphics[scale=0.6]{images/distribucion_grado_pagerank.png}
 \end{center}
 
+% importancia relacionada con la cantidad de conexiones
+Se puede observar como en la mayoría de los casos, la cantidad de conexiones de un nodo se relaciona con la importancia que tiene este en la red. Lo que no ocurre con una cierta cantidad de estos, que a pesar de tener una cantidad considerable de conexiones, no son considerados como importantes según PageRank, ya que PageRank considera también la importancia de los nodos conectados.
 
+Siguiendo con el gráfico de la relación entre intermediación, o betweenness, de cada nodo y su PageRank se tiene: 
+
+\begin{center}
+    \includegraphics[scale=0.6]{images/distribucion_betweenness_pagerank.png}
+\end{center}
+
+% si los nodos importantes como puente son considerados importantes con el pagerank
+La centralidad de intermediación de un nodo nos indica la importancia de un nodo como puente entre otros dos nodos, y se puede observar como los nodos que son considerados menos importante según PageRank, corresponden a los nodos con menores valores de intermediación, pero también existe un pequeño conjunto de nodos con un mayor valor de intermediación pero son considerados menos importantes.
+
+Finalmente, al graficar la relación entre el grado e intermediación de un nodo se obtiene:
+
+\begin{center}
+    \includegraphics[scale=0.6]{images/distribucion_grado_betweenness.png}
+\end{center}
+
+% si nodos con grado bajo son criticos, conectando clusters o comunidades
+Se puede notar como, para la mayoría de los casos, el grado del nodo está directamente relacionado con la intermediación de este. Sim embargo, se puede notar la existencia de algunas excepciones, existen nodos con menor grado que tienen un alto valor de intermediación, mientras que algunos nodos con mayor grado no tienen grandes valores de intermediación, lo que no garantiza que al tener una gran cantidad de conexiones se tenga también un gran valor de intermediación.
 
 \subsection{Núcleo/Periferia}
 \textit{Determine la profundidad de k-cores (el máximo k para el cual el k-core es no vacío), y la cantidad de nodos en cada k-shell (cada “capa de la cebolla” en k-cores).}
