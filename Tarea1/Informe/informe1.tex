@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{subfig}
 \usepackage{array}
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -91,7 +92,7 @@ La distancia promedio entre los nodos es de 3.055 y el diámetro de la red es 8.
 \subsection{Transitividad} 
 \textit{Determine el coeficiente de clustering local de la red. ¿Hay transitividad alta?}
 
-El coeficiente de clustering promedio de la red es 0.11 y la transitividad de la red es 0.05. Esto indica que no hay un alto nivel de clustering ni tampoco una transitividad alta
+El coeficiente de clustering promedio de la red es 0.11 y la transitividad de la red es 0.05. Esto indica que no hay un alto nivel de clustering ni tampoco una transitividad alta.
 
 
 \subsection{Centralidad}  
@@ -135,6 +136,45 @@ Finalmente, al graficar la relación entre el grado e intermediación de un nodo
 
 % si nodos con grado bajo son criticos, conectando clusters o comunidades
 Se puede notar como, para la mayoría de los casos, el grado del nodo está directamente relacionado con la intermediación de este. Sin embargo, se puede notar la existencia de algunas excepciones, existen nodos con menor grado que tienen un alto valor de intermediación, mientras que algunos nodos con mayor grado no tienen grandes valores de intermediación, lo que no garantiza que al tener una gran cantidad de conexiones se tenga también un gran valor de intermediación.
+
+A continuación se muestran los distintos coloreos según los valores de cada una de las distintas centralidades:
+
+\begin{figure}[H]
+    \centering
+    \subfloat[\centering Coloreo por partición]{{\includegraphics[scale=0.3]{images/coloreo_pagerank.png} }}%
+    \qquad
+    \subfloat[\centering Coloreo por ranking]{{\includegraphics[scale=0.3]{images/coloreo_pagerank_v2.png} }}%
+    \caption{Coloreo por PageRank}%
+    \label{fig:pagerank-coloring}%
+\end{figure}
+
+\vspace{0.2cm}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[\centering Coloreo por partición]{{\includegraphics[scale=0.3]{images/coloreo_betweenness.png} }}%
+    \qquad
+    \subfloat[\centering Coloreo por ranking]{{\includegraphics[scale=0.3]{images/coloreo_betweenness_v2.png} }}%
+    \caption{Coloreo por intermediación}%
+    \label{fig:pagerank-coloring}%
+\end{figure}
+
+\vspace{0.2cm}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[\centering Coloreo por partición]{{\includegraphics[scale=0.3]{images/coloreo_closeness.png} }}%
+    \qquad
+    \subfloat[\centering Coloreo por ranking]{{\includegraphics[scale=0.3]{images/coloreo_closeness_v2.png} }}%
+    \caption{Coloreo por cercanía}%
+    \label{fig:pagerank-coloring}%
+\end{figure}
+
+\vspace{0.2cm}
+
+En los coloreos de la red por partición existe una gran cantidad de particiones con un elemento, generando en total más de 1000 particiones, por lo cual existe una gran cantidad de nodos de color gris.
+
+\newpage
 
 \subsection{Núcleo/Periferia}
 \textit{Determine la profundidad de k-cores (el máximo k para el cual el k-core es no vacío), y la cantidad de nodos en cada k-shell (cada “capa de la cebolla” en k-cores).}
@@ -187,7 +227,7 @@ Se obtuvieron 15 comunidades distintas, con una modularidad de 0.355. A continua
 \subsection{Asortatividad}
 \textit{Calcule el coeficiente de correlación de Newman para medir la asortatividad de la red. ¿Le parece asortativa, disasortativa, o ninguna?}
 
-El coeficiente de correlación de Newman es -0.18 para esta red. Esto indica que es disasortativa (por ser un valor negativo), sin embargo, no está lo suficientemente cerca de -1 como para ser completamente disasortativa
+El coeficiente de correlación de Newman es -0.18 para esta red. Esto indica que es disasortativa (por ser un valor negativo), sin embargo, no está lo suficientemente cerca de -1 como para ser completamente disasortativa.
 
 \subsection{Modelo estructural} 
 \textit{Genere 10 redes aleatorizadas que compartan la distribución de grados de su red, y para cada una de ellas determine la modularidad (aplicando el mismo algoritmo de Lovaina), el coeficiente de correlación, el coeficiente de clustering local, y la profundidad de k-cores. Compare los valores con el obtenido para su red: ¿pueden explicarse sus valores a partir de la distribución de grados, o parecen ser propiedades específicas de la red?}
@@ -215,9 +255,9 @@ A continuación se presenta una tabla con los valores obtenidos al generar 10 re
 \end{table}
 Considerando los valores de la tabla anterior, se puede observar lo siguiente:
 \begin{itemize}
-	\item Modularidad: En la red original la modularidad es de 0.355 mientras que en las redes aleatorizadas varían entre 0.2036 y 0.2105. Dado que esta es una variación significativa de la red original, indica que hay características específicas de la red que generan estos valores
+	\item Modularidad: En la red original la modularidad es de 0.355 mientras que en las redes aleatorizadas varían entre 0.2036 y 0.2105. Dado que esta es una variación significativa de la red original, indica que hay características específicas de la red que generan estos valores.
 
-	\item Profundidad de k-cores: En la red original son 20 y en las aleatorizadas varía entre 18 y 19. Estos valores son bastante cercanos entre sí, por lo que sí se podría explicar por la distribución de grados
+	\item Profundidad de k-cores: En la red original son 20 y en las aleatorizadas varía entre 18 y 19. Estos valores son bastante cercanos entre sí, por lo que sí se podría explicar por la distribución de grados.
 
 	\item Coeficiente de clustering: En la red original el coeficiente es 0.11, y en las redes aleatorias varían entre 0.0634 y 0.0723. Esto sugiere que el coeficiente de clustering de la red original no puede explicarse simplemente por la distribución de grados.
 
