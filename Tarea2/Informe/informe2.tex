@@ -9,6 +9,7 @@
 \usepackage{subfig}
 \usepackage{array}
 \renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\arraystretch}{1.05}
 
 \begin{document}
 
@@ -51,7 +52,7 @@ Sofía Riquelme, ROL: 202073615-4
     \end{bmatrix}
     \]
 
-    EL valor de Fiedler para esta matriz es $0.34032095848177074$ y el vector propio asociado es el siguiente: 
+    El valor de Fiedler para esta matriz es $0.34032095848177074$ y el vector propio asociado es el siguiente: 
     \[
     \begin{bmatrix}
          -0.46724728 \\
@@ -92,6 +93,77 @@ Sofía Riquelme, ROL: 202073615-4
 
         \item no sé lol
     \end{enumerate}
+
+    \item 
+    
+    \item 
+    
+    \item 
+    
+    \item
+    \begin{enumerate}
+        \item El gráfico de la red es el siguiente:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{images/grafico_red_chica.png}
+            \caption{Gráfico de red chica}
+            \label{fig:graph_red_chica}
+        \end{figure}
+
+        Los valores del grado de entrada, betweenness y PageRank de cada nodo son:
+        
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|}
+            \hline
+            Nodo & Grado de entrada & Betweenness & PageRank \\ \hline
+            v1 & $1$ & $0,238095$ & $0,077725$ \\ \hline
+            v2 & $1$ & $0,047619$ & $0,064579$ \\ \hline
+            v3 & $2$ & $0,428571$ & $0,162980$ \\ \hline
+            v4 & $2$ & $0,309524$ & $0,180098$ \\ \hline
+            v5 & $3$ & $0,357143$ & $0,209159$ \\ \hline
+            v6 & $1$ & $0,214286$ & $0,120440$ \\ \hline
+            v7 & $1$ & $0,000000$ & $0,120440$ \\ \hline
+            v8 & $1$ & $0,071429$ & $0,064579$ \\ \hline
+            \end{tabular}
+            \caption{Valores de grado de entrada, betweenness y PageRank}
+            \label{tab:values_red_chica}
+        \end{table}
+
+        \item El ranking de los nodos según su grado de entrada sería:
+        \begin{enumerate}
+            \item v5
+            \item v3 y v4
+            \item v1, v2, v6, v7 y v8
+        \end{enumerate}
+
+        Luego, el ranking de los nodos según su betweenness sería:
+        \begin{enumerate}
+            \item v3
+            \item v4
+            \item v5
+            \item v1
+            \item v6
+            \item v2
+            \item v8
+            \item v7
+        \end{enumerate}
+
+        Finalmente, el ranking de los nodos según su valor de PageRank sería:
+        \begin{enumerate}
+            \item v5
+            \item v4
+            \item v3
+            \item v6 y v7
+            \item v1
+            \item v2 y v8
+        \end{enumerate}
+
+        \item Se puede observar una relación entre grado de entrada, betweenness y valor de PageRank, los nodos con mayor grado de entrada también tienden a tener mayor valores de betweenness y PageRank, que se puede observar en los nodos v3, v4 y v5.
+        
+        más chamullo :>
+    \end{enumerate}
+    
 \end{enumerate}
 
 

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key attr.name="label" attr.type="string" for="node" id="label"/>
+<key attr.name="Edge Label" attr.type="string" for="edge" id="edgelabel"/>
+<key attr.name="weight" attr.type="double" for="edge" id="weight"/>
+<key attr.name="r" attr.type="int" for="node" id="r"/>
+<key attr.name="g" attr.type="int" for="node" id="g"/>
+<key attr.name="b" attr.type="int" for="node" id="b"/>
+<key attr.name="x" attr.type="float" for="node" id="x"/>
+<key attr.name="y" attr.type="float" for="node" id="y"/>
+<key attr.name="size" attr.type="float" for="node" id="size"/>
+<key attr.name="score" attr.type="string" for="node" id="score"/>
+<key attr.name="newscore" attr.type="string" for="node" id="newscore"/>
+<key attr.name="indegree" attr.type="string" for="node" id="indegree"/>
+<key attr.name="outdegree" attr.type="string" for="node" id="outdegree"/>
+<key attr.name="totaldegree" attr.type="string" for="node" id="totaldegree"/>
+<key attr.name="modularityclass" attr.type="string" for="node" id="modularityclass"/>
+<key attr.name="__edgeid" attr.type="string" for="edge" id="__edgeid"/>
+<key attr.name="width" attr.type="string" for="edge" id="width"/>
+<graph edgedefault="directed">
+<node id="1">
+<data key="label">v1</data>
+<data key="score">0.125</data>
+<data key="newscore">0.011122011882475637</data>
+<data key="indegree">1</data>
+<data key="outdegree">2</data>
+<data key="totaldegree">3</data>
+<data key="modularityclass">0</data>
+<data key="size">4.0</data>
+<data key="r">153</data>
+<data key="g">153</data>
+<data key="b">153</data>
+<data key="x">89.14773</data>
+<data key="y">27.347069</data>
+</node>
+<node id="2">
+<data key="label">v2</data>
+<data key="score">0.125</data>
+<data key="newscore">0.008858074747045998</data>
+<data key="indegree">1</data>
+<data key="outdegree">1</data>
+<data key="totaldegree">2</data>
+<data key="modularityclass">0</data>
+<data key="size">4.0</data>
+<data key="r">153</data>
+<data key="g">153</data>
+<data key="b">153</data>
+<data key="x">120.77279</data>
+<data key="y">-30.156796</data>
+</node>
+<node id="3">
+<data key="label">v3</data>
+<data key="score">0.125</data>
+<data key="newscore">0.026034595929651586</data>
+<data key="indegree">2</data>
+<data key="outdegree">3</data>
+<data key="totaldegree">5</data>
+<data key="modularityclass">0</data>
+<data key="size">4.0</data>
+<data key="r">153</data>
+<data key="g">153</data>
+<data key="b">153</data>
+<data key="x">37.450005</data>
+<data key="y">-26.528984</data>
+</node>
+<node id="4">
+<data key="label">v4</data>
+<data key="score">0.125</data>
+<data key="newscore">0.03892820481787709</data>
+<data key="indegree">2</data>
+<data key="outdegree">2</data>
+<data key="totaldegree">4</data>
+<data key="modularityclass">1</data>
+<data key="size">4.0</data>
+<data key="r">153</data>
+<data key="g">153</data>
+<data key="b">153</data>
+<data key="x">-18.806618</data>
+<data key="y">-52.999935</data>
+</node>
+<node id="5">
+<data key="label">v5</data>
+<data key="score">0.125</data>
+<data key="newscore">0.040863945058486235</data>
+<data key="indegree">3</data>
+<data key="outdegree">2</data>
+<data key="totaldegree">5</data>
+<data key="modularityclass">1</data>
+<data key="size">4.0</data>
+<data key="r">153</data>
+<data key="g">153</data>
+<data key="b">153</data>
+<data key="x">-44.117455</data>
+<data key="y">9.646671</data>
+</node>
+<node id="6">
+<data key="label">v6</data>
+<data key="score">0.125</data>
+<data key="newscore">0.03254490271987749</data>
+<data key="indegree">1</data>
+<data key="outdegree">1</data>
+<data key="totaldegree">2</data>
+<data key="modularityclass">1</data>
+<data key="size">4.0</data>
+<data key="r">153</data>
+<data key="g">153</data>
+<data key="b">153</data>
+<data key="x">-86.50213</data>
+<data key="y">-58.127766</data>
+</node>
+<node id="7">
+<data key="label">v7</data>
+<data key="score">0.125</data>
+<data key="newscore">0.9202901900975401</data>
+<data key="indegree">1</data>
+<data key="outdegree">0</data>
+<data key="totaldegree">1</data>
+<data key="modularityclass">1</data>
+<data key="size">4.0</data>
+<data key="r">153</data>
+<data key="g">153</data>
+<data key="b">153</data>
+<data key="x">-120.033676</data>
+<data key="y">62.801216</data>
+</node>
+<node id="8">
+<data key="label">v8</data>
+<data key="score">0.125</data>
+<data key="newscore">0.008858074747045998</data>
+<data key="indegree">1</data>
+<data key="outdegree">1</data>
+<data key="totaldegree">2</data>
+<data key="modularityclass">0</data>
+<data key="size">4.0</data>
+<data key="r">153</data>
+<data key="g">153</data>
+<data key="b">153</data>
+<data key="x">22.089363</data>
+<data key="y">68.018524</data>
+</node>
+<edge id="7" source="1" target="2">
+<data key="weight">1.0</data>
+<data key="__edgeid">6</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="8" source="1" target="8">
+<data key="weight">1.0</data>
+<data key="__edgeid">7</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="6" source="2" target="3">
+<data key="weight">1.0</data>
+<data key="__edgeid">5</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="12" source="3" target="1">
+<data key="weight">1.0</data>
+<data key="__edgeid">11</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="5" source="3" target="4">
+<data key="weight">1.0</data>
+<data key="__edgeid">4</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="10" source="3" target="5">
+<data key="weight">1.0</data>
+<data key="__edgeid">9</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="4" source="4" target="3">
+<data key="weight">1.0</data>
+<data key="__edgeid">3</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="11" source="4" target="5">
+<data key="weight">1.0</data>
+<data key="__edgeid">10</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="2" source="5" target="6">
+<data key="weight">1.0</data>
+<data key="__edgeid">1</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="1" source="5" target="7">
+<data key="weight">1.0</data>
+<data key="__edgeid">0</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="3" source="6" target="4">
+<data key="weight">1.0</data>
+<data key="__edgeid">2</data>
+<data key="width">0.0</data>
+</edge>
+<edge id="9" source="8" target="5">
+<data key="weight">1.0</data>
+<data key="__edgeid">8</data>
+<data key="width">0.0</data>
+</edge>
+</graph>
+</graphml>
