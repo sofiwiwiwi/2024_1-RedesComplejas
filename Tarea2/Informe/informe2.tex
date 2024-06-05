@@ -91,9 +91,26 @@ Sofía Riquelme, ROL: 202073615-4
         Utilizando la misma convergencia de series geométricas, se tiene que la expresión generadora para la distribución de grados es:
         $$G(x) = (1-\alpha)\left(\frac{1}{1-\alpha x}\right)$$
 
-        \item no sé lol
+        \item Al solamente tener información de la distribución de grados, se tiene una componente gigante en el grafo cuanso se cumple:
+        $$\sum_{i=0}^{\infty} i (i - 2) P(i) > 0$$
+
+        Sustituimos $P(k) = C\alpha^k$ y $C = 1-\alpha$ en la expresión:
+        $$\sum i_{i=0}^{\infty} (i - 2) (1 - \alpha) \alpha^{i} > 0$$
+        $$(1 - \alpha) \sum_{i=0}^{\infty} i (i - 2) \alpha^{i} > 0$$
+        $$(1 - \alpha) (\sum_{i=0}^{\infty} i^{2} \alpha^{i} - 2 \sum_{i=0}^{\infty} i \alpha^{i}) > 0$$
+        $$(1 - \alpha) (\frac{\alpha (1 + \alpha)}{(1-\alpha)^{3}} - 2 \frac{\alpha}{(1-\alpha)^{2}}) > 0$$
+        $$(1 - \alpha) (\frac{3\alpha^{2} - \alpha}{(1-\alpha)^{3}}) > 0$$
+        $$\frac{3\alpha^{2} - \alpha}{(1-\alpha)^{2}} > 0$$
+        
+        Con lo cual se puede despejar $\alpha$, obteniendo que:
+        $$\frac{3\alpha^{2} - \alpha}{(1-\alpha)^{2}} > 0$$
+        $$3\alpha^{2} - \alpha > 0$$
+        $$\alpha (3\alpha - 1)> 0$$
+        $$\alpha > \frac{1}{3}$$
+
+        Finalmente como tenemos $0 < \alpha < 1$, para que exista una componente gigante en el grafo se tiene que cumplir que $\frac{1}{3} < \alpha < 1$.
     \end{enumerate}
-    \newpage
+
     \item Al hacer las eliminaciones se obtuvieron los siguientes resultados:
     \begin{table}[H]
         \footnotesize
@@ -151,31 +168,31 @@ Sofía Riquelme, ROL: 202073615-4
 
         \item El ranking de los nodos según su grado de entrada sería:
         \begin{enumerate}
-            \item v5
-            \item v3 y v4
-            \item v1, v2, v6, v7 y v8
+            \item v5 ($3$).
+            \item v3 y v4 ($2$).
+            \item v1, v2, v6, v7 y v8 ($1$).
         \end{enumerate}
 
         Luego, el ranking de los nodos según su betweenness sería:
         \begin{enumerate}
-            \item v3
-            \item v4
-            \item v5
-            \item v1
-            \item v6
-            \item v2
-            \item v8
-            \item v7
+            \item v3 ($0.428571$).
+            \item v5 ($0.357143$).
+            \item v4 ($0.309524$).
+            \item v1 ($0.238095$).
+            \item v6 ($0.214286$).
+            \item v8 ($0.071429$).
+            \item v2 ($0.047619$).
+            \item v7 ($0.000000$).
         \end{enumerate}
 
         Finalmente, el ranking de los nodos según su valor de PageRank sería:
         \begin{enumerate}
-            \item v5
-            \item v4
-            \item v3
-            \item v6 y v7
-            \item v1
-            \item v2 y v8
+            \item v5 ($0.209159$).
+            \item v4 ($0.180098$).
+            \item v3 ($0.162980$).
+            \item v6 y v7 ($0.120440$).
+            \item v1 ($0.077725$).
+            \item v2 y v8 ($0.064579$).
         \end{enumerate}
 
         \item Se puede observar una relación entre grado de entrada, betweenness y valor de PageRank, los nodos con mayor grado de entrada también tienden a tener mayor valores de betweenness y PageRank, que se puede observar en los nodos v3, v4 y v5.
