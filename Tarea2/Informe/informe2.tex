@@ -9,7 +9,7 @@
 \usepackage{subfig}
 \usepackage{array}
 \renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\arraystretch}{1.05}
+\renewcommand{\arraystretch}{1.1}
 
 \begin{document}
 
@@ -134,9 +134,39 @@ Sofía Riquelme, ROL: 202073615-4
      Se puede observar que en el caso de la red Piratas (la original y la ER), al eliminar por grado y por betweenness se requiere un bajo porcentaje de nodos para que la componente gigante baje considerablemente su tamaño. Sin embargo, en las redes de Delfines, en todos los casos se requiere eliminar un porcentaje no menor. 
      Esto sugiere que la red de piratas es extremadamente vulnerable a ataques dirigidos, lo cual se puede deber a que tiene una estructura centralizada, a diferencia de la red de delfines. Asimismo las redes ER, muestran una mayor fragilidad por su estructura más homogénea.
 
-    \item 
+    \item Luego de calcular la modularidad promedio $Q^{d}(p)$ para las dos posibles particiones se obtuvieron los siguientes resultados:
     
-    \item Dado que todos los nodos tienen grado $k$, el grado promedio de la red también es $k$. Dicho esto, queremos que de acuerdo con la teoría de percolación, queremos que se cumpla lo siguiente: $$1-\frac{1}{k} > 0.95$$ $$0.05>\frac{1}{k}$$ $$\frac{1}{0.05}>k$$ $$k>20$$ Entonces, $k$ debe ser mayor a 20 para que al eliminar el 95 \% de los nodos siga existiendo una componente gigante.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{$p$} & \textbf{$Q_{B}^{d}$} & \textbf{$Q_{C}^{d}$} \\ \hline
+            $0.0$ & $0.12800588$ & $0.00190496$ \\ \hline
+            $0.1$ & $0.08123612$ & $0.0007397$ \\ \hline
+            $0.2$ & $0.04913890$ & $0.00231686$ \\ \hline
+            $0.3$ & $0.02125331$ & $0.00156286$ \\ \hline  
+            $0.4$ & $0.00902243$ & $0.00217117$ \\ \hline
+            $0.5$ & $0.00398928$ & $0.00112336$ \\ \hline
+            $0.6$ & $0.00727439$ & $0.00381207$ \\ \hline
+            $0.7$ & $0.02271023$ & $0.00177777$ \\ \hline
+            $0.8$ & $0.04808281$ & $0.00401861$ \\ \hline
+            $0.9$ & $0.08286395$ & $0.00197586$ \\ \hline
+            $1.0$ & $0.12718032$ & $0.00194545$ \\ \hline
+        \end{tabular}
+        \caption{Modularidad dirigida para distintos valores de $p$}
+        \label{tab:modularidad}
+    \end{table}
+    
+    Se muestra uun gráfico mostrando la relación entre estos valores obtenidos para la modularidad en función de $p$:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{images/modularidad_dirigida.png}
+        \caption{Modularidad por particiones en función de $p$}
+        \label{fig:grafico_modularidad}
+    \end{figure}
+    
+    \item Dado que todos los nodos tienen grado $k$, el grado promedio de la red también es $k$. Dicho esto, queremos que de acuerdo con la teoría de percolación, queremos que se cumpla lo siguiente: $$1-\frac{1}{k} > 0.95$$ $$0.05>\frac{1}{k}$$ $$k>\frac{1}{0.05}$$ $$k>20$$ Entonces, $k$ debe ser mayor a 20 para que al eliminar el 95 \% de los nodos siga existiendo una componente gigante.
     
     \item
     \begin{enumerate}
@@ -154,7 +184,7 @@ Sofía Riquelme, ROL: 202073615-4
             \centering
             \begin{tabular}{|c|c|c|c|}
             \hline
-            Nodo & Grado de entrada & Betweenness & PageRank \\ \hline
+            \textbf{Nodo} & \textbf{Grado de entrada} & \textbf{Betweenness} & \textbf{PageRank} \\ \hline
             v1 & $1$ & $0,238095$ & $0,077725$ \\ \hline
             v2 & $1$ & $0,047619$ & $0,064579$ \\ \hline
             v3 & $2$ & $0,428571$ & $0,162980$ \\ \hline
@@ -197,9 +227,10 @@ Sofía Riquelme, ROL: 202073615-4
             \item v2 y v8 ($0.064579$).
         \end{enumerate}
 
-        \item Se puede observar una relación entre grado de entrada, betweenness y valor de PageRank, los nodos con mayor grado de entrada también tienden a tener mayor valores de betweenness y PageRank, que se puede observar en los nodos v3, v4 y v5.
-        
-        más chamullo :>
+        \item Se puede observar una relación entre grado de entrada, betweenness y valor de PageRank, específicamente para los nodos con altos valores de estos, que es posible notar en los nodos v3, v4 y v5. Se puede decir que los nodos que tienen una mayor cantidad de conexiones de entradas son considerados más importantes en el grafo y, a su vez, son importantes como puente entre otros dos nodos.
+
+        Otro caso interesante es que el nodo v7 tenga un mayor valor de PageRank que los nodos v2 y v8, considerando que su valor de betweenness es 0. Esto se puede deber a que el nodo v7 tiene una conexión de entrada con un nodo con PageRank elevado, en comparación a los nodos v2 y v8 que tienen una conexión de salida con un nodo con PageRank elevado.
+
     \end{enumerate}
     \item 
     \item A continuación se muestra el gráfico de $p$ versus $d$:
