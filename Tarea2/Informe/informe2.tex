@@ -142,7 +142,7 @@ Sofía Riquelme, ROL: 202073615-4
             \hline
             \textbf{$p$} & \textbf{$Q_{B}^{d}$} & \textbf{$Q_{C}^{d}$} \\ \hline
             $0.0$ & $0.12800588$ & $0.00190496$ \\ \hline
-            $0.1$ & $0.08123612$ & $0.0007397$ \\ \hline
+            $0.1$ & $0.08123612$ & $0.00073970$ \\ \hline
             $0.2$ & $0.04913890$ & $0.00231686$ \\ \hline
             $0.3$ & $0.02125331$ & $0.00156286$ \\ \hline  
             $0.4$ & $0.00902243$ & $0.00217117$ \\ \hline
@@ -157,7 +157,7 @@ Sofía Riquelme, ROL: 202073615-4
         \label{tab:modularidad}
     \end{table}
     
-    Se muestra uun gráfico mostrando la relación entre estos valores obtenidos para la modularidad en función de $p$:
+    Se presenta un gráfico mostrando la relación entre estos valores obtenidos para la modularidad en función de $p$:
 
     \begin{figure}[H]
         \centering
@@ -165,6 +165,12 @@ Sofía Riquelme, ROL: 202073615-4
         \caption{Modularidad por particiones en función de $p$}
         \label{fig:grafico_modularidad}
     \end{figure}
+
+    Es posible notar del gráfico que desde $p = 0$ la modularidad de la primera partición, $(B1, B2)$, disminuye a medida que aumenta el valor de $p$ hasta llegar a $p = 0,5$, donde se presenta la menor modularidad del grafo, para luego ir aumentando a medida que aumenta en valor de $p$.
+
+    En cambio, la modularidad de la segunda partición, $(C1, C2)$, se mantiene baja y no varía mucho en comparación a la primera partición, además se puede notar que no sigue un patrón claro en relación a si disminuye/aumenta su valor a medida que aumenta el valor de $p$. 
+
+    Esto nos puede decir que la primera partición es mucho más sensible a la estructura que presenta el grafo, y además se obtienen los mayores valores de modularidad cuando $p = 0$ y $p = 1$, lo que muestra la clara separación entre los nodos de $B1$ y $B2$. Mientras que, para la segunda partición no se puede ver reflejada ninguna estructura del grafo debido a los valores bajos de la modularidad y tampoco varían mucho con los distintos valores de $p$. Todo esto refleja la importancia que tiene la partición elegida en la detección de la estructura de una red.
     
     \item Dado que todos los nodos tienen grado $k$, el grado promedio de la red también es $k$. Dicho esto, queremos que de acuerdo con la teoría de percolación, queremos que se cumpla lo siguiente: $$1-\frac{1}{k} > 0.95$$ $$0.05>\frac{1}{k}$$ $$k>\frac{1}{0.05}$$ $$k>20$$ Entonces, $k$ debe ser mayor a 20 para que al eliminar el 95 \% de los nodos siga existiendo una componente gigante.
     
