@@ -91,7 +91,7 @@ Sofía Riquelme, ROL: 202073615-4
         Utilizando la misma convergencia de series geométricas, se tiene que la expresión generadora para la distribución de grados es:
         $$G(x) = (1-\alpha)\left(\frac{1}{1-\alpha x}\right)$$
 
-        \item Al solamente tener información de la distribución de grados, se tiene una componente gigante en el grafo cuanso se cumple:
+        \item Al solamente tener información de la distribución de grados, se tiene una componente gigante en el grafo cuando se cumple:
         $$\sum_{i=0}^{\infty} i (i - 2) P(i) > 0$$
 
         Sustituimos $P(k) = C\alpha^k$ y $C = 1-\alpha$ en la expresión:
@@ -119,18 +119,20 @@ Sofía Riquelme, ROL: 202073615-4
             \hline
             \textbf{Red} & \textbf{Nodos Iniciales} & \textbf{Aleatorio} & \textbf{Por Grado} & \textbf{Por Betweenness} \\
             \hline
-            Piratas & $795$ & $33.33\%$ & $3.02\%$ & $3.14\%$ \\
+            Piratas & $795$ & $32.08\%$ & $3.02\%$ & $3.14\%$ \\
             \hline
-            Delfines & $62$ & $41.94\%$ & $24.19\%$ & $12.90\%$ \\
+            Delfines & $62$ & $38.71\%$ & $24.19\%$ & $12.90\%$ \\
             \hline
-            ER Piratas & $795$ & $24.40\%$ & $8.18\%$ & $5.16\%$ \\
+            ER Piratas & $795$ & $29.94\%$ & $8.18\%$ & $5.16\%$ \\
             \hline
-            ER Delfines & $62$ & $43.55\%$ & $30.65\%$ & $29.03\%$ \\
+            ER Delfines & $62$ & $48.39\%$ & $30.65\%$ & $29.03\%$ \\
             \hline
         \end{tabular}
         \caption{Resumen de Eliminaciones en Diferentes Redes}
         \label{tabla:resumen_eliminaciones}
     \end{table}
+     Se puede observar que en el caso de la red Piratas (la original y la ER), al eliminar por grado y por betweenness se requiere un bajo porcentaje de nodos para que la componente gigante baje considerablemente su tamaño. Sin embargo, en las redes de Delfines, en todos los casos se requiere eliminar un porcentaje no menor. 
+     Esto sugiere que la red de piratas es extremadamente vulnerable a ataques dirigidos, lo cual se puede deber a que tiene una estructura centralizada, a diferencia de la red de delfines. Asimismo las redes ER, muestran una mayor fragilidad por su estructura más homogénea.
 
     \item 
     
@@ -199,7 +201,7 @@ Sofía Riquelme, ROL: 202073615-4
         
         más chamullo :>
     \end{enumerate}
-    
+    \item 
 \end{enumerate}
 
 
