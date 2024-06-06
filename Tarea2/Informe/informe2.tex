@@ -136,7 +136,7 @@ Sofía Riquelme, ROL: 202073615-4
 
     \item 
     
-    \item 
+    \item Dado que todos los nodos tienen grado $k$, el grado promedio de la red también es $k$. Dicho esto, queremos que de acuerdo con la teoría de percolación, queremos que se cumpla lo siguiente: $$1-\frac{1}{k} > 0.95$$ $$0.05>\frac{1}{k}$$ $$\frac{1}{0.05}>k$$ $$k>20$$ Entonces, $k$ debe ser mayor a 20 para que al eliminar el 95 \% de los nodos siga existiendo una componente gigante.
     
     \item
     \begin{enumerate}
@@ -202,6 +202,14 @@ Sofía Riquelme, ROL: 202073615-4
         más chamullo :>
     \end{enumerate}
     \item 
+    \item A continuación se muestra el gráfico de $p$ versus $d$:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{images/grafico_p8.png}
+        \caption{Relación entre $p$ y distancia promedio}
+        \label{fig:graph_p}
+    \end{figure}
+    Se puede observar que mientras mayor sea la probabilidad $p$ (es decir, $1-p$ es menor), mayor es la distancia promedio. Sin embargo, no se observa un claro cambio de fase entre un mundo grande y un mundo pequeño. Esto puede deberse a que n no es lo suficientemente grande, por lo que sería interesante intentarlo con una mayor cantidad de nodos.
 \end{enumerate}
 
 
