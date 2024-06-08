@@ -262,6 +262,14 @@ Sofía Riquelme, ROL: 202073615-4
         \caption{Frecuencia de los diferentes motifs presentes en la red}
         \label{tab:motifs}
     \end{table}
+
+    Se puede notar como solamente se indentifican dos tipos de motifs en la red M3 y M10. El motif M3 representa una secuencia lineal de citaciones, donde un paper $A$ cita a otro paper $B$, que a su vez este paper $B$ cita a otro paper $C$, tiene una frecuencia de $9767$, lo que tiene sentido en esta red, ya que con el paso del tiempo surgen nuevas formas de representar problemas, ideas y posibles soluciones inspirado en el trabajo previo.
+    
+    En cambio, el motif M10 representa colaboraciones entre estos papers, donde un paper $A$ y $B$ se citan mutuamente y ambos citan por separado a un paper $C$, este motif tiene una frecuencia de $1777$ lo que sugiere la existencia de comunidades que colaboran estrechamente entre ellos inspirados en algún trabajo previo en común.
+
+    Además, la ausencia de los otros motifs sugiere que se tiene una red considerablemente simple, sin relaciones entre citaciones complejas o muy entrelazadas entre sí.
+
+    Para el cálculo del vector de clustering dirigido propuesto por Ahnert \& Fink se implementó una función que lo calcularía pero, debido a nuestra capacidad computacional, no fue posible ejecutar dicho código exitosamente.
     
     \item A continuación se muestra el gráfico de $p$ versus $d$:
     \begin{figure}[H]
