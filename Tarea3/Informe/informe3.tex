@@ -49,7 +49,7 @@ Sofía Riquelme, ROL: 202073615-4
             \caption{Distribución de avalanchas}
             \label{fig:grafico_avalancha}
         \end{figure}
-        Se puede ver que para ambos casos, se sigue una ley de potencia: $$P(x) \sim x^{-\alpha}$$Posterior a esto se hizo un código para estimar el parámetro $\alpha$ y se obtuvo que el que mejor se ajustaba es $\alpha = 4.07$ para la red Erdös-Renyi y $\alpha = 2.66$ para la red Barabási-Albert, como se muestra en la figura a continuación:
+        Es posible notar que en ambos caso la distribución muestra que la mayoría de las avalanchas son pequeñas, y como cae rápidamente su frecuencia a medida que aumenta el tamaño de la avalancha. Se puede ver que para ambos casos, se sigue una ley de potencia: $$P(x) \sim x^{-\alpha}$$Posterior a esto se hizo un código para estimar el parámetro $\alpha$ y se obtuvo que el que mejor se ajustaba es $\alpha = 4.07$ para la red Erdös-Renyi y $\alpha = 2.66$ para la red Barabási-Albert, como se muestra en la figura a continuación:
         \begin{figure}[H]
             \centering
             \includegraphics[scale=0.55]{images/grafico_ajuste.png}
@@ -87,7 +87,11 @@ Sofía Riquelme, ROL: 202073615-4
                 \caption{Influencia de estudiante 1695}
                 \label{fig:influencia}
             \end{figure}
-            Se pueden ver de inmediato los periodos de baja actividad social, representados por colores más claros en el gráfico.
+            Los períodos con mayor actividad social, o influencia, están representados por los colores más oscuros en el gráfico, lo que sugiere que existen momentos específicos durante el día donde la influencia del estudiante es mayor, los que pueden relacionarse con recreos, actividades grupales, entre otros.
+
+            También es posible notar los períodos de baja actividad social del estudiante, representados por los colores más claros en el gráfico, que pueden estar relacionados con momentos en los que el estudiante no se encuentra en la escula, por ejemplo. El análisis de los períodos con mayor y menor actividad social permiten identificar los patrones de influencia, que además proporcionan información sobre la dinámica de esta red.
+
+            Finalmente, al observar estos patrones de influencia en función del tiempo y la duración de estas interacciones es posible notar los momentos claves que podrían ser útiles para un estudio más detallado o intervención.
         \end{enumerate}
 \end{itemize}
 \end{document}
